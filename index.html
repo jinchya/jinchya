@@ -33,33 +33,38 @@
     .fallback-link {
       margin-top: 10px;
     }
-    /* 底部橫向聯絡條 */
+    /* 聯絡資訊條 */
     .contact-bar {
       width: 100%;
       background-color: #fff;
       border-top: 1px solid #ddd;
-      padding: 8px 0;
+      padding: 10px 0;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* 整個區塊置中 */
     }
     .contact-content {
       width: 90%;
-      max-width: 1100px;
-      display: flex;
-      flex-wrap: wrap; /* 小螢幕換行 */
-      gap: 15px;
+      max-width: 900px;
+      text-align: right; /* 文字靠右 */
       font-size: 14px;
-      text-align: right;
+      line-height: 1.5;
+      box-sizing: border-box;
     }
-    .contact-item {
-      white-space: nowrap;
+    .contact-content p {
+      margin: 3px 0;
     }
-    .contact-item a {
+    .contact-content a {
       color: #0073e6;
       text-decoration: none;
     }
-    .contact-item a:hover {
+    .contact-content a:hover {
       text-decoration: underline;
+    }
+    /* 手機螢幕文字置中調整 */
+    @media (max-width: 600px) {
+      .contact-content {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -81,10 +86,10 @@
 
   <div class="contact-bar">
     <div class="contact-content">
-      <div class="contact-item"><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</div>
-      <div class="contact-item"><strong>聯絡人：</strong>黃致凱</div>
-      <div class="contact-item"><strong>聯絡電話：</strong><a href="tel:0927679637">0927-679-637</a></div>
-      <div class="contact-item"><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></div>
+      <p><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</p>
+      <p><strong>聯絡人：</strong>黃致凱</p>
+      <p><strong>聯絡電話：</strong><a href="tel:0927679637">0927-679-637</a></p>
+      <p><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></p>
     </div>
   </div>
 </body>
