@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>智強科技精密股份有限公司</title>
-  <link rel="icon" href="logo_mini.ico" type="image/x-icon" / >
+  <link rel="icon" href="logo_mini.ico" type="image/x-icon" />
   <style>
     body {
       font-family: sans-serif;
@@ -18,24 +18,37 @@
     .pdf-container {
       width: 100%;
       max-width: 900px;
-      height: 90vh;
+      height: calc(100vh - 200px);
       margin: 0 auto;
       border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: white;
     }
-    iframe {
+    iframe, object {
       width: 100%;
       height: 100%;
       border: none;
     }
+    .fallback-link {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <img src="logo.png" />
+  <img src="logo.png" alt="智強科技精密股份有限公司 Logo" />
   <h1>智強科技精密股份有限公司簡介</h1>
+
   <div class="pdf-container">
-    <iframe src="CompanyProfile_2025.pdf"></iframe>
+    <object data="CompanyProfile_2025.pdf" type="application/pdf">
+      <p>無法顯示 PDF，請點
+        <a href="CompanyProfile_2025.pdf" target="_blank">這裡下載</a>
+      </p>
+    </object>
   </div>
-  <p>若無法正常顯示 PDF，請點 <a href="company-intro.pdf" target="_blank">這裡開啟</a></p>
+
+  <p class="fallback-link">若無法正常顯示 PDF，請點
+    <a href="CompanyProfile_2025.pdf" target="_blank">這裡開啟</a>
+  </p>
 </body>
 </html>
+
