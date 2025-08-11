@@ -11,6 +11,7 @@
       text-align: center;
       padding: 20px;
       background-color: #f5f5f5;
+      margin: 0;
     }
     h1 {
       color: #333;
@@ -18,7 +19,7 @@
     .pdf-container {
       width: 100%;
       max-width: 900px;
-      height: calc(100vh - 250px);
+      height: calc(100vh - 230px);
       margin: 0 auto;
       border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -32,26 +33,31 @@
     .fallback-link {
       margin-top: 10px;
     }
-    .contact-info {
-      margin-top: 20px;
-      padding: 8px;
+    /* 聯絡資訊條 */
+    .contact-bar {
+      width: 100%;
       background-color: #fff;
-      border: 1px solid #ddd;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      line-height: 1.4;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center; /* 區塊置中 */
+    }
+    .contact-content {
+      width: 90%;
+      max-width: 900px;
+      text-align: left; /* 文字靠左 */
       font-size: 14px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      line-height: 1.5;
     }
-    .contact-info h2 {
-      margin: 0 0 5px 0;
-      font-size: 16px;
-      color: #444;
-    }
-    .contact-info p {
+    .contact-content p {
       margin: 3px 0;
+    }
+    .contact-content a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    .contact-content a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -71,12 +77,13 @@
     <a href="CompanyProfile_2025.pdf" target="_blank">這裡開啟</a>
   </p>
 
-  <div class="contact-info">
-    <h2>聯絡資訊</h2>
-    <p><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</p>
-    <p><strong>聯絡人：</strong>黃致凱</p>
-    <p><strong>聯絡電話：</strong>0927-679-637</p>
-    <p><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></p>
+  <div class="contact-bar">
+    <div class="contact-content">
+      <p><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</p>
+      <p><strong>聯絡人：</strong>黃致凱</p>
+      <p><strong>聯絡電話：</strong><a href="tel:0927679637">0927-679-637</a></p>
+      <p><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></p>
+    </div>
   </div>
 </body>
 </html>
