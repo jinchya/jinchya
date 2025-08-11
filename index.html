@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>智強科技精密股份有限公司</title>
-  <link rel="icon" href="logo_mini.ico" type="image/x-icon" />
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #f5f5f5;
-      margin: 0;
-    }
-    h1 {
-      color: #333;
-    }
-    .pdf-container {
-      width: 100%;
-      max-width: 900px;
-      height: calc(100vh - 230px);
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      background-color: white;
-    }
-    iframe, object {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .fallback-link {
-      margin-top: 10px;
-    }
-    /* 聯絡資訊條 */
-    .contact-bar {
-      width: 100%;
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center; /* 整個區塊置中 */
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>智強科技精密股份有限公司</title>
+<link rel="icon" href="logo_mini.ico" type="image/x-icon" />
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 0;
+  }
+  h1 {
+    color: #333;
+  }
+  .pdf-container {
+    width: 100%;
+    max-width: 900px;
+    height: calc(100vh - 230px);
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  iframe, object {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .fallback-link {
+    margin-top: 10px;
+  }
+
+  /* 底部橫向聯絡條 */
+  .contact-bar {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-content {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap; /* 小螢幕換行 */
+    gap: 15px;
+    font-size: 14px;
+  }
+  .contact-item {
+    white-space: nowrap;
+    text-align: right; /* 文字靠右 */
+    flex: 1 1 auto;
+  }
+  .contact-item a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* 手機寬度調整：置中且自動換行 */
+  @media (max-width: 600px) {
     .contact-content {
-      width: 90%;
-      max-width: 900px;
-      text-align: right; /* 文字靠右 */
-      font-size: 14px;
-      line-height: 1.5;
-      box-sizing: border-box;
+      justify-content: center;
     }
-    .contact-content p {
-      margin: 3px 0;
+    .contact-item {
+      white-space: normal;
+      text-align: center;
+      flex: 100%;
     }
-    .contact-content a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-    .contact-content a:hover {
-      text-decoration: underline;
-    }
-    /* 手機螢幕文字置中調整 */
-    @media (max-width: 600px) {
-      .contact-content {
-        text-align: center;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <img src="logo.png" alt="智強科技精密股份有限公司 Logo" />
@@ -86,10 +95,10 @@
 
   <div class="contact-bar">
     <div class="contact-content">
-      <div><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</div>
-      <div><strong>聯絡人：</strong>黃致凱</div>
-      <div><strong>聯絡電話：</strong><a href="tel:0927679637">0927-679-637</a></div>
-      <div><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></div>
+      <div class="contact-item"><strong>公司地址：</strong>新北市鶯歌區中正三路448巷1號</div>
+      <div class="contact-item"><strong>聯絡人：</strong>黃致凱</div>
+      <div class="contact-item"><strong>聯絡電話：</strong><a href="tel:0927679637">0927-679-637</a></div>
+      <div class="contact-item"><strong>Email：</strong><a href="mailto:jacob_huang@jinchya.com">jacob_huang@jinchya.com</a></div>
     </div>
   </div>
 </body>
